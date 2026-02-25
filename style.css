@@ -1,0 +1,49 @@
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    margin: 0;
+    background: linear-gradient(to right, #00ffcc, #0088ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ticking {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #00ffcc;
+    letter-spacing: 3px;
+    font-family: monospace;
+}
+
+.subtext {
+    color: #444;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* The Ticking Animation */
+.blink {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
