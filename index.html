@@ -3,16 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magadh FM | Official</title>
+    <title>Magadh FM | The Empire of Stories</title>
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1 id="brand-name">MAGADH FM</h1>
-        <div class="ticking" id="status-text">_LOADING EMPIRE_</div>
-        <p class="subtext">Innovation meets tradition.</p>
-    </div>
+<body class="bg-dark text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">MAGADH FM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About & Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3 px-4" href="https://youtube.com/@MagadhFmEnglish">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+        <div class="container">
+            <img src="assets/logo.png" alt="Magadh FM Logo" class="img-fluid mb-4" style="max-height: 150px;">
+            <h1 class="display-1 fw-bold main-title">Rise of the Empire</h1>
+            <p class="lead mb-5 opacity-75">Manhwa | AI Music | Historical Epics</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#intro" class="btn btn-primary btn-lg px-5 py-3">Watch Intro</a>
+                <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="intro" class="py-5 bg-black">
+        <div class="container text-center">
+            <h2 class="mb-4">Latest Release</h2>
+            <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/placeholder" title="Magadh FM Video" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center border-top border-secondary mt-5">
+        <div class="container">
+            <div class="social-links mb-4">
+                <a href="#" class="text-white mx-3 fs-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@MagadhFmEnglish" class="text-white mx-3 fs-3"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white mx-3 fs-3"><i class="fab fa-discord"></i></a>
+            </div>
+            <p class="small opacity-50">&copy; 2026 Magadh FM. Powered by RTX 5060 & AI.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
