@@ -1,8 +1,6 @@
 /* =========================================
-   MAGADH FM - OFFICIAL ENGINE (script.js)
+   SECTION 1: FIREBASE & ANALYTICS
    ========================================= */
-
-// 1. FIREBASE CONFIGURATION
 const firebaseConfig = {
     apiKey: "AIzaSyCx9NEijeMktE0Zpgid1dTV7j8mP9ITl7s",
     authDomain: "magadh-fm.firebaseapp.com",
@@ -24,7 +22,9 @@ try {
     console.error("Firebase connection failed.", e);
 }
 
-// 2. SMART TYPEWRITER EFFECT
+/* =========================================
+   SECTION 2: SMART TYPEWRITER EFFECT
+   ========================================= */
 const textElement = document.querySelector(".typewriter-text");
 let brandName = "MAGADH FM"; 
 
@@ -43,10 +43,11 @@ function typeEffect() {
     }
 }
 
-// 3. SIDEBAR NAVIGATION
+/* =========================================
+   SECTION 3: SIDEBAR NAVIGATION
+   ========================================= */
 function toggleMenu() {
     const menu = document.getElementById("sideMenu");
-    // Using a class toggle is more reliable than checking inline width
     if (menu.style.width === "300px") {
         menu.style.width = "0";
     } else {
@@ -54,27 +55,38 @@ function toggleMenu() {
     }
 }
 
-// 4. PRELOADER & TYPEWRITER TRIGGER
+/* =========================================
+   SECTION 4: PRELOADER (With Emergency Clear)
+   ========================================= */
 window.addEventListener('load', function() {
     const preloader = document.getElementById("preloader");
     
     if (preloader) {
-        setTimeout(() => {
+        // EMERGENCY CLEAR: Force hide after 4 seconds if stuck
+        const forceClear = setTimeout(hidePreloader, 4000);
+
+        function hidePreloader() {
+            clearTimeout(forceClear); // Cancel force timer if it runs normally
             preloader.style.transition = "opacity 0.8s ease, visibility 0.8s";
             preloader.style.opacity = "0";
             preloader.style.visibility = "hidden";
             
             setTimeout(() => {
                 preloader.style.display = "none";
-                typeEffect(); // Start typing only after preloader is gone
+                typeEffect(); 
             }, 800); 
-        }, 1500); // 1.5s delay to show the logo
+        }
+
+        // Natural clear with the 1.5s logo delay
+        setTimeout(hidePreloader, 1500);
     } else {
-        typeEffect(); // If no preloader, start typing immediately
+        typeEffect(); 
     }
 });
 
-// 5. SEARCH SYSTEM
+/* =========================================
+   SECTION 5: SEARCH SYSTEM
+   ========================================= */
 const siteRealms = [
     { name: "Horror Realm", url: "horror.html" },
     { name: "Magic Realm", url: "magic.html" },
@@ -132,7 +144,7 @@ if (searchInput) {
     });
 }
 
-// Close search if clicking outside
+// Global Click Listener
 document.addEventListener('click', function(e) {
     const wrapper = document.getElementById('searchWrapper');
     const dropdown = document.getElementById('searchDropdown');
